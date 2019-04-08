@@ -1,0 +1,673 @@
+{
+  "debug": true,
+  "process": {
+    "file_limit": 1000000,
+    "core_limit": 1000000000
+  },
+  "log": {
+    "path": "/var/log/trade/matchengine",
+    "flag": "fatal,error,warn,info,debug,trace",
+    "num": 10
+  },
+  "alert": {
+    "host": "matchengine",
+    "addr": "127.0.0.1:4444"
+  },
+  "svr": {
+    "bind": [
+      "tcp@0.0.0.0:7316",
+      "udp@0.0.0.0:7316"
+    ],
+    "buf_limit": 100,
+    "max_pkg_size": 10240,
+    "heartbeat_check": false
+  },
+  "cli": "tcp@127.0.0.1:7317",
+  "db_log": {
+    "host": "db",
+    "user": "root",
+    "pass": "KenExPassWord",
+    "name": "trade_log"
+  },
+  "db_history": {
+    "host": "db",
+    "user": "root",
+    "pass": "KenExPassWord",
+    "name": "trade_history"
+  },
+  "assets": [
+    {
+      "name": "BTC",
+      "prec_save": 20,
+      "prec_show": 8
+    },
+    {
+      "name": "USDT",
+      "prec_save": 20,
+      "prec_show": 8
+    },
+    {
+      "name": "ETH",
+      "prec_save": 20,
+      "prec_show": 8
+    },
+    {
+      "name": "VNDT",
+      "prec_save": 20,
+      "prec_show": 8
+    },
+    {
+      "name": "KRW",
+      "prec_save": 20,
+      "prec_show": 2
+    },
+    {
+      "name": "BCHABC",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "BCHSV",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "LTC",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "ETC",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "ZEC",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "XMR",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "DSH",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "KFC",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "EOS",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "CLO",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "XRP",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "ROL",
+      "prec_save": 12,
+      "prec_show": 8
+    }
+  ],
+  "markets": [
+    {
+      "name": "BTCBCHABC",
+      "stock": {
+        "name": "BCHABC",
+        "prec": 8
+      },
+      "money": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "BTCBCHSV",
+      "stock": {
+        "name": "BCHSV",
+        "prec": 8
+      },
+      "money": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "BTCETC",
+      "stock": {
+        "name": "ETC",
+        "prec": 8
+      },
+      "money": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "BTCDSH",
+      "stock": {
+        "name": "DSH",
+        "prec": 8
+      },
+      "money": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "BTCLTC",
+      "stock": {
+        "name": "LTC",
+        "prec": 8
+      },
+      "money": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "BTCXMR",
+      "stock": {
+        "name": "XMR",
+        "prec": 8
+      },
+      "money": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "BTCROL",
+      "stock": {
+        "name": "ROL",
+        "prec": 8
+      },
+      "money": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "BTCZEC",
+      "stock": {
+        "name": "ZEC",
+        "prec": 8
+      },
+      "money": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "BTCKFC",
+      "stock": {
+        "name": "KFC",
+        "prec": 8
+      },
+      "money": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "BTCEOS",
+      "stock": {
+        "name": "EOS",
+        "prec": 8
+      },
+      "money": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "BTCCLO",
+      "stock": {
+        "name": "CLO",
+        "prec": 8
+      },
+      "money": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "BTCXRP",
+      "stock": {
+        "name": "XRP",
+        "prec": 8
+      },
+      "money": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+
+    {
+      "name": "USDTBTC",
+      "stock": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "money": {
+        "name": "USDT",
+        "prec": 8
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "USDTBCHABC",
+      "stock": {
+        "name": "BCHABC",
+        "prec": 8
+      },
+      "money": {
+        "name": "USDT",
+        "prec": 8
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "USDTBCHSV",
+      "stock": {
+        "name": "BCHSV",
+        "prec": 8
+      },
+      "money": {
+        "name": "USDT",
+        "prec": 8
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "USDTETH",
+      "stock": {
+        "name": "ETH",
+        "prec": 8
+      },
+      "money": {
+        "name": "USDT",
+        "prec": 8
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "USDTETC",
+      "stock": {
+        "name": "ETC",
+        "prec": 8
+      },
+      "money": {
+        "name": "USDT",
+        "prec": 8
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "USDTROL",
+      "stock": {
+        "name": "ROL",
+        "prec": 8
+      },
+      "money": {
+        "name": "USDT",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "USDTDSH",
+      "stock": {
+        "name": "DSH",
+        "prec": 8
+      },
+      "money": {
+        "name": "USDT",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "USDTZEC",
+      "stock": {
+        "name": "ZEC",
+        "prec": 8
+      },
+      "money": {
+        "name": "USDT",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "USDTLTC",
+      "stock": {
+        "name": "LTC",
+        "prec": 8
+      },
+      "money": {
+        "name": "USDT",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "ETHBTC",
+      "stock": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "money": {
+        "name": "ETH",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "ETHBCHABC",
+      "stock": {
+        "name": "BCHABC",
+        "prec": 8
+      },
+      "money": {
+        "name": "ETH",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "ETHBCHSV",
+      "stock": {
+        "name": "BCHSV",
+        "prec": 8
+      },
+      "money": {
+        "name": "ETH",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "ETHETC",
+      "stock": {
+        "name": "ETC",
+        "prec": 8
+      },
+      "money": {
+        "name": "ETH",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "ETHDSH",
+      "stock": {
+        "name": "DSH",
+        "prec": 8
+      },
+      "money": {
+        "name": "ETH",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "ETHLTC",
+      "stock": {
+        "name": "LTC",
+        "prec": 8
+      },
+      "money": {
+        "name": "ETH",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "ETHROL",
+      "stock": {
+        "name": "ROL",
+        "prec": 8
+      },
+      "money": {
+        "name": "ETH",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "ETHXMR",
+      "stock": {
+        "name": "XMR",
+        "prec": 8
+      },
+      "money": {
+        "name": "ETH",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "ETHZEC",
+      "stock": {
+        "name": "ZEC",
+        "prec": 8
+      },
+      "money": {
+        "name": "ETH",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+
+    {
+      "name": "VNDTBTC",
+      "stock": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "money": {
+        "name": "VNDT",
+        "prec": 2
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "VNDTETH",
+      "stock": {
+        "name": "ETH",
+        "prec": 8
+      },
+      "money": {
+        "name": "VNDT",
+        "prec": 2
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "VNDTETC",
+      "stock": {
+        "name": "ETC",
+        "prec": 8
+      },
+      "money": {
+        "name": "VNDT",
+        "prec": 2
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "VNDTBCHABC",
+      "stock": {
+        "name": "BCHABC",
+        "prec": 8
+      },
+      "money": {
+        "name": "VNDT",
+        "prec": 2
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "VNDTBCHSV",
+      "stock": {
+        "name": "BCHSV",
+        "prec": 8
+      },
+      "money": {
+        "name": "VNDT",
+        "prec": 2
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "VNDTKRW",
+      "stock": {
+        "name": "KRW",
+        "prec": 2
+      },
+      "money": {
+        "name": "VNDT",
+        "prec": 2
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "VNDTROL",
+      "stock": {
+        "name": "ROL",
+        "prec": 8
+      },
+      "money": {
+        "name": "VNDT",
+        "prec": 2
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "VNDTUSDT",
+      "stock": {
+        "name": "USDT",
+        "prec": 8
+      },
+      "money": {
+        "name": "VNDT",
+        "prec": 2
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "VNDTDSH",
+      "stock": {
+        "name": "DSH",
+        "prec": 8
+      },
+      "money": {
+        "name": "VNDT",
+        "prec": 2
+      },
+      "min_amount": "0.001"
+    },
+
+    {
+      "name": "KRWUSDT",
+      "stock": {
+        "name": "USDT",
+        "prec": 8
+      },
+      "money": {
+        "name": "KRW",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "KRWETH",
+      "stock": {
+        "name": "ETH",
+        "prec": 8
+      },
+      "money": {
+        "name": "KRW",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "KRWROL",
+      "stock": {
+        "name": "ROL",
+        "prec": 8
+      },
+      "money": {
+        "name": "KRW",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "KRWBCHABC",
+      "stock": {
+        "name": "BCHABC",
+        "prec": 8
+      },
+      "money": {
+        "name": "KRW",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "KRWBCHSV",
+      "stock": {
+        "name": "BCHSV",
+        "prec": 8
+      },
+      "money": {
+        "name": "KRW",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "KRWBTC",
+      "stock": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "money": {
+        "name": "KRW",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    }
+  ],
+  "brokers": "kafka:9092",
+  "slice_interval": 3600,
+  "slice_keeptime": 259200
+}
